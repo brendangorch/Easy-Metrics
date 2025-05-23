@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e9fc3640-e7e2-43c8-a3ea-2b786d7fcd2e}</ProjectGuid>
+    <RootNamespace>EasyMetrics</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);SFML_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\SFML-3.0.0\include;$(SolutionDir)dependencies\ADLX\include;$(SolutionDir)dependencies\imgui\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)dependencies\SFML-3.0.0\lib;$(SolutionDir)dependencies\imgui\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;opengl32.lib;freetyped.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);SFML_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\SFML-3.0.0\include;$(SolutionDir)dependencies\ADLX\include;$(SolutionDir)dependencies\imgui\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)dependencies\SFML-3.0.0\lib;$(SolutionDir)dependencies\imgui\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-window-s-d.lib;sfml-system-s-d.lib;opengl32.lib;freetyped.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);SFML_STATIC</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)dependencies\SFML-3.0.0\include;$(SolutionDir)dependencies\ADLX\include;$(SolutionDir)dependencies\imgui\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)dependencies\SFML-3.0.0\lib;$(SolutionDir)dependencies\imgui\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-s.lib;sfml-window-s.lib;sfml-system-s.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dependencies\imgui\lib\imgui-SFML.cpp" />
+    <ClCompile Include="dependencies\imgui\lib\imgui.cpp" />
+    <ClCompile Include="dependencies\imgui\lib\imgui_demo.cpp" />
+    <ClCompile Include="dependencies\imgui\lib\imgui_draw.cpp" />
+    <ClCompile Include="dependencies\imgui\lib\imgui_tables.cpp" />
+    <ClCompile Include="dependencies\imgui\lib\imgui_widgets.cpp" />
+    <ClCompile Include="src\ADLXHelper.cpp" />
+    <ClCompile Include="src\inter.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\metricsoverlay.cpp" />
+    <ClCompile Include="src\performancemonitor.cpp" />
+    <ClCompile Include="src\WinAPIs.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dependencies\ADLX\include\ADLX.h" />
+    <ClInclude Include="dependencies\ADLX\include\ADLXDefines.h" />
+    <ClInclude Include="dependencies\ADLX\include\ADLXStructures.h" />
+    <ClInclude Include="dependencies\ADLX\include\ADLXVersion.h" />
+    <ClInclude Include="dependencies\ADLX\include\I3DSettings.h" />
+    <ClInclude Include="dependencies\ADLX\include\I3DSettings1.h" />
+    <ClInclude Include="dependencies\ADLX\include\I3DSettings2.h" />
+    <ClInclude Include="dependencies\ADLX\include\IApplications.h" />
+    <ClInclude Include="dependencies\ADLX\include\IChangedEvent.h" />
+    <ClInclude Include="dependencies\ADLX\include\ICollections.h" />
+    <ClInclude Include="dependencies\ADLX\include\IDesktops.h" />
+    <ClInclude Include="dependencies\ADLX\include\IDisplay3DLUT.h" />
+    <ClInclude Include="dependencies\ADLX\include\IDisplayGamma.h" />
+    <ClInclude Include="dependencies\ADLX\include\IDisplayGamut.h" />
+    <ClInclude Include="dependencies\ADLX\include\IDisplays.h" />
+    <ClInclude Include="dependencies\ADLX\include\IDisplays1.h" />
+    <ClInclude Include="dependencies\ADLX\include\IDisplays2.h" />
+    <ClInclude Include="dependencies\ADLX\include\IDisplays3.h" />
+    <ClInclude Include="dependencies\ADLX\include\IDisplaySettings.h" />
+    <ClInclude Include="dependencies\ADLX\include\IGPUAutoTuning.h" />
+    <ClInclude Include="dependencies\ADLX\include\IGPUManualFanTuning.h" />
+    <ClInclude Include="dependencies\ADLX\include\IGPUManualGFXTuning.h" />
+    <ClInclude Include="dependencies\ADLX\include\IGPUManualPowerTuning.h" />
+    <ClInclude Include="dependencies\ADLX\include\IGPUManualVRAMTuning.h" />
+    <ClInclude Include="dependencies\ADLX\include\IGPUPresetTuning.h" />
+    <ClInclude Include="dependencies\ADLX\include\IGPUTuning.h" />
+    <ClInclude Include="dependencies\ADLX\include\IGPUTuning1.h" />
+    <ClInclude Include="dependencies\ADLX\include\II2C.h" />
+    <ClInclude Include="dependencies\ADLX\include\ILog.h" />
+    <ClInclude Include="dependencies\ADLX\include\IMultiMedia.h" />
+    <ClInclude Include="dependencies\ADLX\include\IPerformanceMonitoring.h" />
+    <ClInclude Include="dependencies\ADLX\include\IPerformanceMonitoring1.h" />
+    <ClInclude Include="dependencies\ADLX\include\IPerformanceMonitoring2.h" />
+    <ClInclude Include="dependencies\ADLX\include\IPerformanceMonitoring3.h" />
+    <ClInclude Include="dependencies\ADLX\include\IPowerTuning.h" />
+    <ClInclude Include="dependencies\ADLX\include\IPowerTuning1.h" />
+    <ClInclude Include="dependencies\ADLX\include\ISmartAccessMemory.h" />
+    <ClInclude Include="dependencies\ADLX\include\ISystem.h" />
+    <ClInclude Include="dependencies\ADLX\include\ISystem1.h" />
+    <ClInclude Include="dependencies\ADLX\include\ISystem2.h" />
+    <ClInclude Include="dependencies\imgui\include\imconfig.h" />
+    <ClInclude Include="dependencies\imgui\include\imgui-SFML.h" />
+    <ClInclude Include="dependencies\imgui\include\imgui-SFML_export.h" />
+    <ClInclude Include="dependencies\imgui\include\imgui.h" />
+    <ClInclude Include="dependencies\imgui\include\imgui_internal.h" />
+    <ClInclude Include="dependencies\imgui\include\imstb_rectpack.h" />
+    <ClInclude Include="dependencies\imgui\include\imstb_textedit.h" />
+    <ClInclude Include="dependencies\imgui\include\imstb_truetype.h" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Config.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\GpuPreference.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\BlendMode.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\CircleShape.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Color.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\ConvexShape.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\CoordinateType.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Drawable.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Export.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Font.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Glsl.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Glyph.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Image.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\PrimitiveType.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Rect.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\RectangleShape.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\RenderStates.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\RenderTarget.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\RenderTexture.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\RenderWindow.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Shader.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Shape.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Sprite.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\StencilMode.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Text.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Texture.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Transform.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Transformable.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Vertex.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\VertexArray.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\VertexBuffer.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Graphics\View.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Main.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\OpenGL.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Angle.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Clock.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Err.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Exception.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Export.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\FileInputStream.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\InputStream.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\MemoryInputStream.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\NativeActivity.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Sleep.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\String.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\SuspendAwareClock.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Time.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Utf.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Vector2.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\System\Vector3.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Clipboard.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Context.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\ContextSettings.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Cursor.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Event.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Export.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\GlResource.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Joystick.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Keyboard.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Mouse.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Sensor.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Touch.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\VideoMode.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Vulkan.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\Window.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\WindowBase.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\WindowEnums.hpp" />
+    <ClInclude Include="dependencies\SFML-3.0.0\include\SFML\Window\WindowHandle.hpp" />
+    <ClInclude Include="include\ADLXHelper.h" />
+    <ClInclude Include="include\inter.h" />
+    <ClInclude Include="include\metricsoverlay.h" />
+    <ClInclude Include="include\performancemonitor.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Color.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Glsl.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Rect.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\Graphics\Transform.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\System\Angle.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\System\String.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\System\Time.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\System\Utf.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\System\Vector2.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\System\Vector3.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\Window\Event.inl" />
+    <None Include="dependencies\SFML-3.0.0\include\SFML\Window\WindowBase.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="dependencies\SFML-3.0.0\lib\freetype.lib" />
+    <Library Include="dependencies\SFML-3.0.0\lib\freetyped.lib" />
+    <Library Include="dependencies\SFML-3.0.0\lib\sfml-graphics-s-d.lib" />
+    <Library Include="dependencies\SFML-3.0.0\lib\sfml-graphics-s.lib" />
+    <Library Include="dependencies\SFML-3.0.0\lib\sfml-system-s-d.lib" />
+    <Library Include="dependencies\SFML-3.0.0\lib\sfml-system-s.lib" />
+    <Library Include="dependencies\SFML-3.0.0\lib\sfml-window-s-d.lib" />
+    <Library Include="dependencies\SFML-3.0.0\lib\sfml-window-s.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="EasyMetrics.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
