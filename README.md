@@ -14,16 +14,15 @@ A C++ program for monitoring AMD GPU and CPU performance metrics through a custo
 ## Customize the Overlay
 Select a combination of metrics. Adjust the overlay, metric label and value colours. Choose the level of transparency and size of text. View the sample metric at the bottom right and adjust til you're happy.
 </br>
-insert
-</br>
-insert
+![Image](https://github.com/user-attachments/assets/e92ed5fe-dd63-44db-a3d8-0b7573c81f26)
+![Image](https://github.com/user-attachments/assets/16f395a1-1cc9-40bb-904a-dab87da93034)
 </br>
 </br>
 
 ## Real-Time Metric Updates
 The metrics are updated in real-time, providing you the most current GPU and CPU stats.
 </br>
-insert
+![Image](https://github.com/user-attachments/assets/5d5c6d1c-7ccf-43bf-b9db-71f3f75b9e31)
 </br>
 </br>
 
@@ -33,3 +32,4 @@ insert
   - [ImGUI](https://github.com/ocornut/imgui)
 - ADLX was used for gathering performance metrics from AMD hardware.
   - [ADLX](https://gpuopen.com/adlx/)
+
