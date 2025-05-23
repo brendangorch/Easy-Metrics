@@ -11,3 +11,25 @@ A C++ program for monitoring AMD GPU and CPU performance metrics through a custo
 </br>
 </br>
 
+## Customize the Overlay
+Select a combination of metrics. Adjust the overlay, metric label and value colours. Choose the level of transparency and size of text. View the sample metric at the bottom right and adjust til you're happy.
+</br>
+insert
+</br>
+insert
+</br>
+</br>
+
+## Real-Time Metric Updates
+The metrics are updated in real-time, providing you the most current GPU and CPU stats.
+</br>
+insert
+</br>
+</br>
+
+## Libraries Used
+- SFML with ImGUI were used for window and overlay creation, and all UI.
+  - [SFML](https://www.sfml-dev.org/)
+  - [ImGUI](https://github.com/ocornut/imgui)
+- ADLX was used for gathering performance metrics from AMD hardware.
+  - [ADLX](https://gpuopen.com/adlx/)
